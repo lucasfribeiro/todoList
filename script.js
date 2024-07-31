@@ -44,7 +44,7 @@ addTask.addEventListener('click', () => {
 
 tasks.addEventListener('click', (e) => {
     if (e.target.classList.contains('bx-trash')){
-        e.target.parentElement.parentElement.parentElement.remove();
+        e.target.parentElement.parentElement.remove();
     }
 })
 
