@@ -83,7 +83,7 @@ width: 100%;
   border-bottom: 1px solid #ffffff54;
 }
 
-.item.completed {
+.item.completed p{
     text-decoration: line-through;
     color: #ffffff54;
 }
