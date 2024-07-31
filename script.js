@@ -1,7 +1,5 @@
 const newTask = document.getElementById('new_task');
 const addTask = document.getElementById('add_task');
-const checkBtn = document.getElementById('check_btn');
-const removeBtn = document.getElementById('remove_btn');
 const tasks = document.querySelector('.tasks');
 const item = document.querySelector('.item');
 
@@ -23,8 +21,8 @@ addTask.addEventListener('click', () => {
        <p>${newTask.value}</p>
 
                 <div class="buttons">
-                    <button id="check_btn"><i class='bx bx-check'></i></button>
-                    <button id="remove_btn"><i class='bx bx-trash'></i></button>
+                    <i class='bx bx-check'></i>
+                    <i class='bx bx-trash'></i>
                 </div>
         `
         tasks.appendChild(newItem);
@@ -41,5 +39,19 @@ addTask.addEventListener('click', () => {
               background: "#121212",
             },
           }).showToast();
+    }
+})
+
+tasks.addEventListener('click', (e) => {
+    if (e.target.classList.contains('bx-trash')){
+        e.target.parentElement.parentElement.parentElement.remove();
+    }
+})
+
+tasks.addEventListener('click', (e) =>{
+    if(e.target.classList.contains('bx-check')
+    ) {
+        e.target.parentElement.parentElement.classList.
+        toggle('completed');
     }
 })

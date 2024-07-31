@@ -82,12 +82,13 @@ width: 100%;
   padding: 0.75rem 0;
   border-bottom: 1px solid #ffffff54;
 }
-.item .completed p{
+
+.item.completed {
     text-decoration: line-through;
     color: #ffffff54;
 }
 
-.buttons button {
+.buttons i {
   font-size: 1.5rem;
   background-color: transparent;
   border: 0;
@@ -95,7 +96,7 @@ width: 100%;
   color: #0f5;
 }
 
-.buttons button:last-child{
+.buttons i:last-child{
     color: #f05;
 }
 
